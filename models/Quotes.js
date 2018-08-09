@@ -8,6 +8,10 @@ const quotesSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Product'
   },
+  buyer: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Buyer'
+  },
   dateRequested: {
     type: String,
     trim: true

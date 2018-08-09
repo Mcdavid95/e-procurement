@@ -6,6 +6,10 @@ const receiptSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
+  buyer: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Buyer'
+  },
   product: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Product'

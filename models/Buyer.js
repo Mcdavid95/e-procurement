@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
 
-const userSchema = new mongoose.Schema({
+const buyerSchema = new mongoose.Schema({
   firstname: { type: String, required: true },
   password: { type: String, required: true },
   lastname: { type: String, required: true },
@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
 
 const SALT_WORK_FACTOR = 10;
 
-userSchema.pre('save', function (next) {
+buyerSchema.pre('save', function (next) {
   const user = this;
 
   // only hash the password if it has been modified (or is new)
@@ -37,5 +37,5 @@ userSchema.pre('save', function (next) {
   });
 });
 
-const User = mongoose.model('User', userSchema);
-export default User;
+const Buyer = mongoose.model('Buyer', buyerSchema);
+export default Buyer;

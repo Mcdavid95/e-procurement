@@ -9,6 +9,10 @@ const invoiceSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Product'
   },
+  buyer: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Buyer'
+  },
   supplier: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Supplier'
@@ -16,5 +20,5 @@ const invoiceSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
 });
 
-const Product = mongoose.model('Product', invoiceSchema);
-export default Product;
+const Invoices = mongoose.model('Invoices', invoiceSchema);
+export default Invoices;

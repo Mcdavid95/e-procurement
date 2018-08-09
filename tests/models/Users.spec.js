@@ -1,18 +1,18 @@
 import chai from 'chai';
 
-import User from '../../models/User';
+import Buyer from '../../models/Buyer';
 import users from '../__mocks__/users.json';
 
 const { expect } = chai;
 
 describe('User Model', () => {
   before((done) => {
-    User.remove({}, () => {
+    Buyer.remove({}, () => {
     });
     done();
   });
   it('should return a new user registration data', (done) => {
-    const newUser = new User(users[0]);
+    const newUser = new Buyer(users[0]);
 
     expect(typeof newUser).to.equal('object');
     expect(newUser.firstname).to.equal(users[0].firstname);
