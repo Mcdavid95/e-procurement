@@ -1,11 +1,6 @@
 import mongoose from 'mongoose';
 
 const receiptSchema = new mongoose.Schema({
-  paymentMethod: {
-    type: String,
-    required: true,
-    trim: true
-  },
   buyer: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Buyer'
@@ -18,15 +13,9 @@ const receiptSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Suppliers'
   },
-  bank: {
-    type: String,
-    required: true,
-    trim: true
-  },
-  transactionId: {
-    type: String,
-    required: true,
-    trim: true
+  transaction: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Transactions'
   },
   createdAt: { type: Date, default: Date.now },
 });
