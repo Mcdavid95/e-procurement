@@ -1,0 +1,36 @@
+[
+  {
+    "firstname": "Ife",
+    "lastname": "Tomiwa",
+    "email": "tomiwa@gmail.com",
+    "password": "Welcome3000#",
+    "phone": 909404949,
+    "isActivited": false,
+    "activateCode": "yuyuilrowufygihli"
+  },
+  {
+    "userEmail": "tomiwa@gmail.com",
+    "userPassword": "Welcome3000#"
+  },
+  {
+    "userEmail": "@tomiwa@gmail",
+    "userPassword": "Welcome3000#"
+  },
+  {
+    "email": ""
+  },
+  {
+    "newPassword": ""
+  },
+  {
+    "confirmNewPassword": ""
+  },
+  {
+    "newPassword": "Welcome3001#",
+    "confirmNewPassword": "Welcome3009#"
+  },
+  {
+    "newPassword": "Welcome3001#",
+    "confirmNewPassword": "Welcome3001#"
+  }
+]
