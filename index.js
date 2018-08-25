@@ -2,7 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
-// import routes from './routes/routes';
+import routes from './routes/routes';
 
 const option = {
   server: {
@@ -21,7 +21,7 @@ const option = {
 
 dotenv.config();
 // database config
-const configDB = require('./config/database');
+const configDB = require('./config/db');
 
 if (process.env.NODE_ENV === 'production') {
   mongoose.connect(configDB.url_production, option); // connect to our production database
@@ -43,7 +43,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// app.use('/api/v1', routes);
+app.use('/api/v1', routes);
 
 
 // Setup a default catch-all route that sends back a welcome message in JSON format.
